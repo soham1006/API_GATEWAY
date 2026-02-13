@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Gateway</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+
+<body>
+
+<div class="layout">
+
+  <div class="hero">
+    <h1>API Gateway</h1>
+    <p>
+      Securely manage API access, monitor usage,
+      and scale your backend services effortlessly.
+    </p>
+
+    <ul>
+      <li>✔ API Key Authentication</li>
+      <li>✔ Rate Limiting</li>
+      <li>✔ Usage Analytics</li>
+      <li>✔ Backend Proxy Routing</li>
+    </ul>
+  </div>
+
+  <div class="auth-panel">
+
+    <div class="card">
+      <h2>Create Account</h2>
+      <input id="regEmail" placeholder="Email address" />
+      <input id="regPass" type="password" placeholder="Password" />
+      <button onclick="register()">Register</button>
+    </div>
+
+    <div class="card">
+      <h2>Login</h2>
+      <input id="logEmail" placeholder="Email address" />
+      <input id="logPass" type="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

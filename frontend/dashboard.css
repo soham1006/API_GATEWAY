@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+}
+
+/* ===== LAYOUT ===== */
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar {
+  background: #020617;
+  border-right: 1px solid #1e293b;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: #0f172a;
+  color: white;
+}
+
+/* ===== MAIN ===== */
+
+.main {
+  padding: 40px;
+}
+
+.page-title {
+  margin-top: 0;
+}
+
+/* ===== CARDS ===== */
+
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== STATS ===== */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat h4 {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.stat p {
+  font-size: 28px;
+  color: #38bdf8;
+  margin-top: 10px;
+}
+
+/* ===== BUTTON ===== */
+
+button {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  color: #020617;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  box-shadow: 0 6px 18px rgba(56,189,248,0.3);
+}
+
+/* ===== API KEY ===== */
+
+pre {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 12px;
+  border-radius: 8px;
+  color: #38bdf8;
+  overflow-x: auto;
+}
+
+/* ===== PROGRESS ===== */
+
+.progress {
+  height: 12px;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  transition: width 0.4s ease;
+}
+
+/* ===== TABLE ===== */
+
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.logs-table th,
+.logs-table td {
+  padding: 10px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logs-table th {
+  color: #94a3b8;
+}
+
+/* ===== UTIL ===== */
+
+.hidden {
+  display: none;
+}

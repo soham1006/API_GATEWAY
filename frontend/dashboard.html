@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Gateway Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+  <aside class="sidebar">
+    <h2>API Gateway</h2>
+
+    <nav>
+      <button class="nav-item active"
+              onclick="showSection('dashboard', this)">
+        Dashboard
+      </button>
+
+      <button class="nav-item"
+              onclick="showSection('usage', this)">
+        Usage
+      </button>
+
+      <button class="nav-item"
+              onclick="showSection('logs', this)">
+        Logs
+      </button>
+
+      <button class="nav-item"
+              onclick="showSection('settings', this)">
+        Settings
+      </button>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <h1 class="page-title">Developer Dashboard</h1>
+
+    <!-- DASHBOARD -->
+    <section id="dashboardSection">
+
+      <div class="card full">
+        <div class="card-header">
+          <h3>Your API Key</h3>
+          <button id="copyBtn" onclick="copyKey()">Copy</button>
+        </div>
+        <pre id="apikey"></pre>
+      </div>
+
+      <div class="stats">
+        <div class="card stat">
+          <h4>Requests Today</h4>
+          <p id="today">0</p>
+        </div>
+
+        <div class="card stat">
+          <h4>Remaining Limit</h4>
+          <p id="remaining">0</p>
+        </div>
+
+        <div class="card stat">
+          <h4>Usage</h4>
+          <p id="usagePercent">0%</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Usage</h3>
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Test API</h3>
+        <button id="callBtn" onclick="callAPI()">Call /products</button>
+        <pre id="result"></pre>
+      </div>
+
+    </section>
+
+    <section id="usageSection" class="hidden">
+      <div class="card">
+        <h3>Usage Analytics</h3>
+        <p>Charts coming soon...</p>
+      </div>
+    </section>
+
+    <section id="logsSection" class="hidden">
+      <div class="card">
+        <h3>Recent Requests</h3>
+        <table class="logs-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Method</th>
+              <th>Endpoint</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="logs">
+            <tr><td colspan="4">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="settingsSection" class="hidden">
+      <div class="card">
+        <h3>Settings</h3>
+        <p>API key regeneration coming soon.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
