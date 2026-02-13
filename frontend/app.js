@@ -1,4 +1,4 @@
-const API_URL = "";
+const API_URL = "https://api-gateway-j173.onrender.com";
 
 let statsInterval = null;
 
